@@ -1,0 +1,11 @@
+<div class="container" [ngClass]="{'loading':!imageLoad,'loaded':imageLoad}">
+  <img #imgInstance [src]="imageSrc" [hidden]="!imageLoad" class="image-tag">
+  <mat-progress-spinner
+    *ngIf="!imageLoad"
+    class="aubay-img-loader"
+    color="primary"
+    mode="indeterminate"
+    diameter="50"
+  >
+  </mat-progress-spinner>
+</div>

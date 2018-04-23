@@ -1,0 +1,9 @@
+.container.loading {
+  width: 50px;
+  margin: 0 auto;
+}
+
+.container.loaded {
+  margin: 0 auto;
+}
+
