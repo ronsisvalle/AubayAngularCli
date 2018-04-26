@@ -1,19 +1,6 @@
-<div class="center-div">
-  <mat-card class="example-card">
-    <mat-card-header>
-      <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>Ciao, diamo vita alla nostra prima Angular App {{companyName}}!</mat-card-title>
-      <mat-card-subtitle>Aubay</mat-card-subtitle>
-    </mat-card-header>
-    <app-img-loader
-      imageSrc="https://www.aziendabanca.it/images/foto_articoli/Notizie_2017/Aubay_acquisizione_ramo_IT_ADS.jpg"></app-img-loader>
-    <mat-card-content>
-      <p>
-        Let's start !
-      </p>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-button>LIKE</button>
-    </mat-card-actions>
-  </mat-card>
+<div class="container" fxLayout="row" fxLayout.xs="column" fxLayoutWrap
+     fxLayoutGap="0.5%" fxLayoutAlign="center">
+  <div fxFlex="350px" *ngFor="let animal of vectorAnimals">
+    <app-card [cardData]="animal"></app-card>
+  </div>
 </div>

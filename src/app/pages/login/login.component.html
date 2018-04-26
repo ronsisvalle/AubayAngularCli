@@ -1,0 +1,40 @@
+<div class="container" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center">
+  <div fxFlex="500px">
+    <mat-card>
+      <mat-card-content>
+        <div class="image-container">
+          <img src="https://d2h72luu0pohdz.cloudfront.net/wp-content/uploads/2016/03/Aubay.png">
+        </div>
+        <form class="example-form" [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Username" formControlName="username">
+          </mat-form-field>
+          <mat-grid-tile-footer class="validation"
+                                [hidden]="formGroup.controls['username'].valid || !formGroup.controls['username'].touched">
+            <ng-container *ngFor="let validation of validation_messages.username">
+              <div class="error-message"
+                   *ngIf="formGroup.controls['username'].hasError(validation.type) ">
+                <label><span>{{ validation.message }}</span></label>
+              </div>
+            </ng-container>
+          </mat-grid-tile-footer>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Password" formControlName="password">
+          </mat-form-field>
+          <mat-grid-tile-footer class="validation"
+                                [hidden]="formGroup.controls['password'].valid || !formGroup.controls['password'].touched">
+            <ng-container *ngFor="let validation of validation_messages.password">
+              <div class="error-message"
+                   *ngIf="formGroup.controls['password'].hasError(validation.type) ">
+                <label><span>{{ validation.message }}</span></label>
+              </div>
+            </ng-container>
+          </mat-grid-tile-footer>
+          <mat-card-actions>
+            <button type="submit" class="btn btn-primary" mat-button>Login</button>
+          </mat-card-actions>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

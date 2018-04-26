@@ -12,7 +12,6 @@
     ],
     "curly": true,
     "eofline": true,
-    "forin": true,
     "import-blacklist": [
       true,
       "rxjs",
@@ -25,10 +24,6 @@
     ],
     "interface-over-type-literal": true,
     "label-position": true,
-    "max-line-length": [
-      true,
-      140
-    ],
     "member-access": false,
     "member-ordering": [
       true,
@@ -80,7 +75,6 @@
       "check-else",
       "check-whitespace"
     ],
-    "prefer-const": true,
     "quotemark": [
       true,
       "single"

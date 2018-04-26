@@ -1,0 +1,18 @@
+
+.example-header-image {
+  background-image: url('https://d2h72luu0pohdz.cloudfront.net/wp-content/uploads/2016/03/Aubay.png');
+  background-size: cover;
+}
+
+.center-div {
+  margin-top: 50px;
+}
+
+app-img-loader {
+  width: 350px;
+}
+.image-container{
+  max-width: 300px;
+  min-height: 350px;
+  margin: 0 auto;
+}

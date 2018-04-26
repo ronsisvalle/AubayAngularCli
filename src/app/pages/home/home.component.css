@@ -1,25 +1,13 @@
-.example-card {
-  max-width: 350px;
+
+.container {
   margin: 0 auto;
+  padding-top: 15px;
 }
 
-.example-card.mat-card {
-  padding: 24px 4px !important;
+.search-form {
+  width: 90%;
 }
 
-.example-header-image {
-  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-  background-size: cover;
-}
-
-.center-div {
-  margin-top: 50px;
-}
-
-app-img-loader {
-  width: 350px;
-}
-
-:host ::ng-deep app-img-loader .container .image-tag {
-  width: 350px;
+:host ::ng-deep app-img-loader .container .image-tag{
+  width: 300px;
 }
