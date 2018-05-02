@@ -1,5 +1,5 @@
 # Angular-Aubay-Simple
-This project was generated with Angular CLI version 1.7.4 [View it live](https://ronsisvalle.it/angular-example/)
+This project was generated with Angular CLI version 1.7.4
 
 ## Getting started
 Run `npm install` for download all package required
