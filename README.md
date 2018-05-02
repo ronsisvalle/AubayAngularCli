@@ -8,6 +8,8 @@ Run `npm install` for download all package required
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
+Run `node server/server.js` for a mock server. Navigate to `http://localhost:3000/` for show server entry point.
+
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
