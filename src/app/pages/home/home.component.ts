@@ -14,21 +14,21 @@ export class AubayHomePageComponent implements OnInit {
 
   constructor() {
     let snake = new Snake(
-      'https://cdn.vectorstock.com/i/1000x1000/24/60/funny-snake-cartoon-vector-952460.jpg',
+      'assets/funny-snake.png',
       'Giorgio',
-      'This is a fantastic card',
+      'Ciao, sono Giorgio il serpente',
       'Striscia');
     let dog = new Dog(
-      'http://www.lequzhai.com/data/out/66/685854.png',
+      'assets/funny-dog.png',
       'Filippo',
-      'This is a fantastic card',
+      'Ciao, sono Filippo il super cane',
       'Abbaglia'
       )
     ;
     let horse = new Horse(
-      'https://res.cloudinary.com/teepublic/image/private/s--9wA-BGhK--/t_Preview/b_rgb:ffffff,c_limit,f_jpg,h_630,q_90,w_630/v1510211727/production/designs/2038717_1.jpg',
-      'Francesco',
-      'This is a fantastic card',
+      'assets/funny-horse.jpg',
+      'Varenne',
+      'Ciao, sono Varenne un cavallo terribile',
       'Nitrisci');
 
     this.vectorAnimals.push(snake);

@@ -22,3 +22,10 @@
 .error-message{
   color: red;
 }
+.mat-card-actions .btn-primary{
+  background: #eb590c;
+  color: white;
+}
+.mat-card-actions {
+  text-align: right;
+}

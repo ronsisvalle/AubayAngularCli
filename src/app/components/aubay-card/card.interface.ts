@@ -5,5 +5,5 @@ export interface CardInterface {
   descText: string;
   buttonText?: string;
 
-  actionClick?(paramImg);
+  actionClick?(paramImg?);
 }

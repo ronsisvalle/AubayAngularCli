@@ -15,6 +15,11 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import {AubayLoginPageComponent} from './pages/login/login.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {Routing} from './app.routing';
+import {LoginQueryServiceService} from './service/gate/login-query-service.service';
+import {GenericGateServiceService} from './service/commons/generic-gate-service.service';
+import {HttpClientModule} from '@angular/common/http';
+import {AuthServiceService} from './service/commons/auth-service.service';
+import {CanActivateViaAuthGuardGuard} from './service/guard/can-activate-via-auth-guard.guard';
 
 @NgModule({
   declarations: [
@@ -37,11 +42,16 @@ import {Routing} from './app.routing';
     MatToolbarModule,
     MatSidenavModule,
     MatFormFieldModule,
+    HttpClientModule,
     MatIconModule,
     MatButtonModule,
     FlexLayoutModule
   ],
-  providers: [],
+  providers: [
+    GenericGateServiceService,
+    CanActivateViaAuthGuardGuard,
+    AuthServiceService,
+    LoginQueryServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
