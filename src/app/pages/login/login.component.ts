@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {FormGroup} from '@angular/forms';
 import {LoginFormValidator} from '../../validators/login.form.validator';
-import {LoginQueryServiceService} from '../../service/gate/login-query-service.service';
-import {AuthServiceService} from '../../service/commons/auth-service.service';
+import {LoginQueryService} from '../../service/gate/login-query.service';
+import {AuthService} from '../../service/commons/auth.service';
 import {Router} from '@angular/router';
 
 @Component({
@@ -11,15 +11,17 @@ import {Router} from '@angular/router';
 })
 
 export class AubayLoginPageComponent implements OnInit {
-  public formGroup: FormGroup = LoginFormValidator.fromLoginValidator;
+  public formGroup: FormGroup = LoginFormValidator.formLoginValidator;
   public validation_messages: any = LoginFormValidator.fromLoginErrorMessage;
 
-  constructor(private loginQuerySrv: LoginQueryServiceService, private authSrv: AuthServiceService, private router: Router) {
+  constructor(private loginQuerySrv: LoginQueryService, private authSrv: AuthService, private router: Router) {
 
   }
 
   ngOnInit(): void {
-
+    this.formGroup.get('username').valueChanges.subscribe((dataValue) => {
+      console.log(dataValue);
+    });
   }
 
   public onSubmit() {

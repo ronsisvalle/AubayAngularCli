@@ -3,7 +3,7 @@
     <mat-card>
       <mat-card-content>
         <div class="image-container">
-          <img src="https://d2h72luu0pohdz.cloudfront.net/wp-content/uploads/2016/03/Aubay.png">
+          <img src="assets/Aubay.png">
         </div>
         <form class="example-form" [formGroup]="formGroup" (ngSubmit)="onSubmit()">
           <mat-form-field class="example-full-width">
@@ -31,7 +31,9 @@
             </ng-container>
           </mat-grid-tile-footer>
           <mat-card-actions>
-            <button type="submit" class="btn btn-primary pull-right" mat-button>Login</button>
+            <button type="submit" class="btn btn-primary pull-right" mat-button
+                    [ngClass]="{'disabled':!formGroup.valid}">Login
+            </button>
           </mat-card-actions>
         </form>
       </mat-card-content>

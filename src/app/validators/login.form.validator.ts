@@ -2,11 +2,12 @@ import {Validators, FormBuilder, FormGroup, FormControl} from '@angular/forms';
 
 export class LoginFormValidator {
 
-  public static fromLoginValidator: FormGroup =
-    new FormBuilder().group({
-      username: new FormControl('', [Validators.required, Validators.minLength(3)]),
-      password: new FormControl('', [Validators.required])
-    });
+  public static formLoginValidator: FormGroup =
+    new FormBuilder().group(
+      {
+        username: new FormControl('', [Validators.required, Validators.minLength(3)]),
+        password: new FormControl('', [Validators.required])
+      });
 
 
   public static fromLoginErrorMessage: {} = {

@@ -29,3 +29,8 @@
 .mat-card-actions {
   text-align: right;
 }
+
+button.disabled{
+  cursor: not-allowed;
+  opacity: 0.6;
+}

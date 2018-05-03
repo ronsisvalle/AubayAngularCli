@@ -21,7 +21,7 @@ export class AubayHomePageComponent implements OnInit {
     let dog = new Dog(
       'assets/funny-dog.png',
       'Filippo',
-      'Ciao, sono Filippo il super cane',
+      'Ciao, sono Simone il super cane',
       'Abbaglia'
       )
     ;
@@ -38,5 +38,9 @@ export class AubayHomePageComponent implements OnInit {
 
   ngOnInit(): void {
 
+  }
+
+  public action(paramEvent) {
+    //alert(paramEvent);
   }
 }

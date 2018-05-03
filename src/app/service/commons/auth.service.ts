@@ -2,10 +2,12 @@ import {Injectable} from '@angular/core';
 import {User} from '../../model/user';
 
 @Injectable()
-export class AuthServiceService {
+export class AuthService {
   private user: User;
 
   constructor() {
+    let temp = localStorage.getItem('user');
+    this.user = temp ? JSON.parse(temp) : null;
   }
 
 

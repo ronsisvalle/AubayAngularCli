@@ -1,6 +1,6 @@
 <div class="container" fxLayout="row" fxLayout.xs="column" fxLayoutWrap
      fxLayoutGap="0.5%" fxLayoutAlign="center">
   <div fxFlex="350px" *ngFor="let animal of vectorAnimals">
-    <app-card [cardData]="animal"></app-card>
+    <app-card [cardData]="animal" (pippo)="action($event)" ></app-card>
   </div>
 </div>
